@@ -1,0 +1,106 @@
+/* --- Reset / base --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* --- Container --- */
+.article-form { display: flex; justify-content: center; }
+
+.form-container{
+  margin-top: 50px;
+  position: relative;
+  padding: 20px;
+  width: 35%;
+  min-width: 320px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+/* --- Header row --- */
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.back-btn {
+  padding: 6px 10px;
+  background: linear-gradient(to bottom right, #031b4b, #010a16);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.form-title {
+  flex: 1;
+  text-align: center;
+  margin-left: 10px;
+  color: navy;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.spacer { width: 40px; }
+
+/* --- Inputs --- */
+.form-input{ margin: 12px 0; }
+.form-input label{ font-weight: 600; color: #111827; }
+.form-input-field{
+  width: 100%;
+  height: 36px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+#content{ height: auto; min-height: 140px; resize: vertical; }
+#image { width: 100%; padding: 5px 7px; }
+
+.add-article-btn{
+  margin-top: 20px; width: 100%; height: 38px;
+  background: linear-gradient(to bottom right, #031b4b, #010a16);
+  color: #fff;
+  border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+.add-article-btn:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Success Modal --- */
+.modal-backdrop{
+  position: fixed; inset: 0;
+  background: rgba(17,24,39,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 999; backdrop-filter: blur(2px);
+}
+.modal-card{
+  background: linear-gradient(180deg, #f2f7ff 0%, #e8f1ff 100%);
+  color: #111827;
+  border-radius: 12px;
+  padding: 20px 24px;
+  min-width: 280px;
+  max-width: 90vw;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.modal-title { margin: 0 0 16px 0; font-size: 1.1rem; font-weight: 600;color: #fff; }
+.modal-close-btn{
+  appearance: none; border: none; border-radius: 8px;
+  background: #2563eb; color: #fff; padding: 8px 16px;
+  font-weight: 600; cursor: pointer; transition: transform 0.05s ease, background 0.2s ease;
+}
+.modal-close-btn:hover { background: #1d4ed8; }
+.modal-close-btn:active { transform: translateY(1px); }
+
+/* Error styles */
+.field-error { color: #b00020; font-size: 0.9rem; margin-top: 6px; }
+
+/* Red * on labels */
+.form-container label::after {
+  content: " *"; color: #e11d48; font-weight: 700; font-size: 14px; margin-left: 2px;
+}

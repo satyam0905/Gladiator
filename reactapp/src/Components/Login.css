@@ -1,0 +1,236 @@
+
+
+  .loginPage {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 800px;
+    height: 400px;
+    margin-top: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+  }
+  
+  #intro {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  #intro h1 {
+    /* color: #2d4cff; */
+    
+    margin-bottom: 15px;
+
+  }
+  
+  #intro p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+
+  }
+  
+  .loginFormDiv {
+    width: 50%;
+    background: #2d4cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .loginForm {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+
+  }
+  
+
+  .loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+  }
+  
+
+  #loginbtn {
+
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #2d4cff;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  
+
+  #loginbtn:hover {
+
+    background: #1f38d8;
+  
+}
+  
+
+  .loginForm p {
+    margin-top: 15px;
+    font-size: 13px;
+
+  }
+  
+
+
+  .loginForm a {
+    color: #2d4cff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .loginPage .errorText {
+    text-align: left;
+    color: #e53935;
+    font-size: 12px;
+    margin: -8px 0 10px;
+  } */
+
+/* ✅ Option 2: Use a wrapper instead of styling body */
+.loginWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f4f8;
+}
+
+/* Main card */
+.loginPage {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Left side intro */
+.loginPage .intro {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginPage .intro h1 {
+  /* color: #2d4cff; */
+  background: linear-gradient(90deg, #1f3eca, #8b8b8b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.loginPage .intro p {
+  /* color: #555; */
+  background: linear-gradient(90deg, #081b74, #8b8b8b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Right side form container */
+.loginFormDiv {
+  width: 50%;
+  background: #09103a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form box */
+.loginForm {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  text-align: center;
+}
+
+.loginTitle {
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.loginForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Button */
+.loginBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  /* background: #2d4cff; */
+  background: linear-gradient(to bottom right, #031b4b, #486284);
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  /* background: #1f38d8; */
+  background: linear-gradient(to bottom right, #031b4b, #cfd9e7);
+}
+
+/* Signup text */
+.signupText {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.loginForm a {
+  color: #15257c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Error text */
+.loginPage .errorText {
+  text-align: left;
+  color: #e53935;
+  font-size: 12px;
+  margin: -8px 0 10px;
+}
+.loginError {
+  gap: 10px;
+  text-align: left;
+  color: #e53935;
+  font-size: 12px;
+  margin: -8px 0 10px;
+}
+
+.loginBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

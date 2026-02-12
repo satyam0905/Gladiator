@@ -1,0 +1,12 @@
+dotnetapp/Migrations/
+nunit/
+react/
+reactapp/node_modules
+reactapp/package-lock.json
+reactapp/src/apiConfig.js 
+TestProject/
+
+
+dotnetapp/dotnetapp.sln
+reactapp/src/tests/App.test.js
+reactapp/src/tests/__mocks__/axios.js

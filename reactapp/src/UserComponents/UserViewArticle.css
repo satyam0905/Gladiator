@@ -1,0 +1,221 @@
+/* =========================
+   Base Theme
+   ========================= */
+   :root {
+    --bg: #0a0f1f;
+    --text: #e5e7eb;
+    --primary: #2563eb;
+    --accent: #9333ea;
+  
+    --radius-lg: 1.1rem;
+    --shadow-2: 0 1rem 2.2rem rgba(0, 0, 0, 0.45);
+    --shadow-3: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+  
+    --space-3: 1rem;
+    --space-4: 1.4rem;
+  }
+  
+  /* =========================
+     Page
+     ========================= */
+  .view-container {
+    min-height: 100svh;
+    padding: 2rem;
+    background: linear-gradient(180deg, #031b4b, #02122f);
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  /* =========================
+     Header
+     ========================= */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .view-title {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .uva-search {
+    padding: 0.7rem 1rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.15);
+    color: white;
+  }
+  
+  /* =========================
+     Grid
+     ========================= */
+  .card-grid {
+    display: grid;
+    gap: 1.3rem;
+  }
+  
+  @media (min-width: 1200px) {
+    .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* =========================
+     Cards (USER VIEW STYLE)
+     ========================= */
+  .article-card-item {
+    background: linear-gradient(145deg, #0a2f6b, #0b3c91);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    display: flex;
+    flex-direction: column;
+  
+    /* 🔥 flexible height */
+    height: auto;
+  }
+  
+  .article-card-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-3);
+  }
+  
+  /* Image */
+  .article-card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
+  /* Body */
+  .card-body {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Title */
+  .card-title {
+    color: white;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Badges */
+  .badge-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .badge {
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+  }
+  .category-badge { background: var(--primary); }
+  .author-badge { background: var(--accent); }
+  
+  /* Text — natural height */
+  .card-text {
+    color: #dbeafe;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Read more */
+  .read-more {
+    border: none;
+    background: transparent;
+    color: #b3d6ff;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  .read-more:hover { text-decoration: underline; }
+  
+  /* =========================
+     SKELETON FIX (IMPORTANT)
+     ========================= */
+  .skeleton {
+    min-height: 320px;   /* 👈 prevents layout jump */
+  }
+  
+  .sk-img {
+    height: 160px;
+    background: linear-gradient(90deg,#2a3657,#3a4a76,#2a3657);
+    animation: shimmer 1.2s infinite linear;
+  }
+  
+  .sk-line {
+    height: 12px;
+    margin: 14px;
+    border-radius: 6px;
+    background: linear-gradient(90deg,#2a3657,#3a4a76,#2a3657);
+    animation: shimmer 1.2s infinite linear;
+  }
+  
+  .sk-line.short { width: 60%; }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* =========================
+     Popup
+     ========================= */
+  .popup-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-card-popup-b {
+    width: 60%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .popup-card-popup-b img {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+  
+  .popup-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+  
+  .popup-text {
+    line-height: 1.8;
+  }
+  
+  /* Close */
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: red;
+    border: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  
